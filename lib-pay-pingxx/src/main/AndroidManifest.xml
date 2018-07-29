@@ -1,0 +1,17 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.kevinwu.lib_pay_pingxx" >
+
+    <application>
+
+
+        <activity
+            android:name=".PingxxPayActivity"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:launchMode="singleInstance"/>
+
+
+
+    </application>
+
+</manifest>

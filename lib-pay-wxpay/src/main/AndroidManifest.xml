@@ -1,0 +1,12 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.kevinwu.lib_pay_wxpay" >
+    <application>
+
+        <activity
+            android:name=".WXPayEntryActivity"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:launchMode="singleInstance"/>
+
+    </application>
+</manifest>

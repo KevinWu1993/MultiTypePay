@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/MultiPay.iml" filepath="$PROJECT_DIR$/MultiPay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib-pay-alipay/lib-pay-alipay.iml" filepath="$PROJECT_DIR$/lib-pay-alipay/lib-pay-alipay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib-pay-core/lib-pay-core.iml" filepath="$PROJECT_DIR$/lib-pay-core/lib-pay-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib-pay-pingxx/lib-pay-pingxx.iml" filepath="$PROJECT_DIR$/lib-pay-pingxx/lib-pay-pingxx.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib-pay-wxpay/lib-pay-wxpay.iml" filepath="$PROJECT_DIR$/lib-pay-wxpay/lib-pay-wxpay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib-paylib-alipay/lib-paylib-alipay.iml" filepath="$PROJECT_DIR$/lib-paylib-alipay/lib-paylib-alipay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib-paylib-wxpay/lib-paylib-wxpay.iml" filepath="$PROJECT_DIR$/lib-paylib-wxpay/lib-paylib-wxpay.iml" />
+    </modules>
+  </component>
+</project>

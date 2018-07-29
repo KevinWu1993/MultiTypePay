@@ -1,0 +1,1 @@
+include ':app', ':lib-pay-alipay', ':lib-pay-core', ':lib-pay-pingxx', ':lib-pay-wxpay', ':lib-paylib-alipay', ':lib-paylib-wxpay'
