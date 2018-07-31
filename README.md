@@ -10,7 +10,7 @@
 
 ``` grovvy
 dependencies {
-	implementation 'cn.kevinwu:lib-pay-alipay:1.0.0'
+	implementation 'cn.kevinwu:lib-pay-core:1.0.0'
 }
 ```
 2.第三方支付模块，按需添加
