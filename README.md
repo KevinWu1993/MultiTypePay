@@ -63,73 +63,73 @@ dependencies {
 使用方式如下：
 
 ``` java
-try {
-                                    MultiTypePay.pay(App.AppContext, AliPayType.class)
-                                            .setParam("key1", "value1")
-                                            .setParam("key2", "value2")
-                                            .execute(new PayResultCallBack() {
-                                                @Override
-                                                public void onSuccess() {
+  try {
+        MultiTypePay.pay(App.AppContext, AliPayType.class)
+                    .setParam("key1", "value1")
+                    .setParam("key2", "value2")
+                    .execute(new PayResultCallBack() {
+                      @Override
+                      public void onSuccess() {
                                                     
-                                                }
+                      }
 
-                                                @Override
-                                                public void onError(int errorCode) {
+                      @Override
+                      public void onError(int errorCode) {
                                                   
-                                                }
+                      }
 
-                                                @Override
-                                                public void onCancel() {
+                      @Override
+                      public void onCancel() {
 
-                                                }
-                                            });
-                                } catch (IllegalAccessException e) {
-                                    e.printStackTrace();
-                                } catch (InstantiationException e) {
-                                    e.printStackTrace();
-                                }
+                      }
+                     });
+        } catch (IllegalAccessException e) {
+             e.printStackTrace();
+        } catch (InstantiationException e) {
+             e.printStackTrace();
+        }
 ```
 
 其中相应的SDK中封装了官方SDK的参数，如微信支付中使用实例如下：
 
 ``` java
-try {
-                                    MultiTypePay.pay(App.AppContext, WXPayTpye.class)
-                                            .setExtraData("wxe123456789abcdefc")
-                                            .setParam(WXPayParam.appId, resp.getResponse().getAppid())
-                                            .setParam(WXPayParam.partnerId, resp.getResponse().getPartnerid())
-                                            .setParam(WXPayParam.prepayId, resp.getResponse().getPrepayid())
-                                            .setParam(WXPayParam.nonceStr, resp.getResponse().getNoncestr())
-                                            .setParam(WXPayParam.timeStamp, resp.getResponse().getTimestamp())
-                                            .setParam(WXPayParam.packageValue, resp.getResponse().getPkg())
-                                            .setParam(WXPayParam.sign, resp.getResponse().getSign())
-                                            .setParam(WXPayParam.extData, "app data")
-                                            .execute(new PayResultCallBack() {
-                                                @Override
-                                                public void onSuccess() {
-                                                    //这里可以做一些支付成功后的操作
-                                                }
+  try {
+        MultiTypePay.pay(App.AppContext, WXPayTpye.class)
+                    .setExtraData("wxe123456789abcdefc")
+                    .setParam(WXPayParam.appId, resp.getResponse().getAppid())
+                    .setParam(WXPayParam.partnerId, resp.getResponse().getPartnerid())
+                    .setParam(WXPayParam.prepayId, resp.getResponse().getPrepayid())
+                    .setParam(WXPayParam.nonceStr, resp.getResponse().getNoncestr())
+                    .setParam(WXPayParam.timeStamp, resp.getResponse().getTimestamp())
+                    .setParam(WXPayParam.packageValue, resp.getResponse().getPkg())
+                    .setParam(WXPayParam.sign, resp.getResponse().getSign())
+                    .setParam(WXPayParam.extData, "app data")
+                    .execute(new PayResultCallBack() {
+                       @Override
+                       public void onSuccess() {
+                           //这里可以做一些支付成功后的操作
+                       }
 
-                                                @Override
-                                                public void onError(int errorCode) {
-                                                    if(errorCode == WXPayStatusCode.WX_NO_INSTALL){
-                                                        CompatToast.makeText(App.AppContext, "请先安装微信客户端").show();
-                                                    }else if(errorCode == WXPayStatusCode.WX_VERSION_INVALID){
-                                                        CompatToast.makeText(App.AppContext, "当前微信版本不支持此功能，请更新微信").show();
-                                                    }
-                                                   //可以做一些支付错误的操作，上述提示只是举个例子
-                                                }
+                       @Override
+                       public void onError(int errorCode) {
+                           if(errorCode == WXPayStatusCode.WX_NO_INSTALL){
+                                CompatToast.makeText(App.AppContext, "请先安装微信客户端").show();
+                           } else if(errorCode == WXPayStatusCode.WX_VERSION_INVALID) {
+                                CompatToast.makeText(App.AppContext, "当前微信版本不支持此功能，请更新微信").show();
+                           }
+                           //可以做一些支付错误的操作，上述提示只是举个例子
+                       }
 
-                                                @Override
-                                                public void onCancel() {
+                        @Override
+                        public void onCancel() {
 							//这里可以做一些用户取消支付的操作
-                                                }
-                                            });
-                                } catch (IllegalAccessException e) {
-                                    e.printStackTrace();
-                                } catch (InstantiationException e) {
-                                    e.printStackTrace();
-                                }
+                        }
+                    });
+        } catch (IllegalAccessException e) {
+             e.printStackTrace();
+        } catch (InstantiationException e) {
+             e.printStackTrace();
+        }
 ```
 
 ### 三、setter方法说明
