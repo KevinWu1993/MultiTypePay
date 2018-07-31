@@ -34,7 +34,7 @@ dependencies {
 
 ``` xml
 <activity
-            android:name="com.fengbee.lib_pay_core.wxpayhelper.WXPayTransitActivity"
+            android:name="cn.kevinwu.lib_pay_core.wxpayhelper.WXPayTransitActivity"
             android:exported="true"
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
             android:launchMode="singleInstance"/>
@@ -46,7 +46,7 @@ dependencies {
 <activity-alias
             android:name="{应用的包名}.wxapi.WXPayEntryActivity"
             android:exported="true"
-            android:targetActivity="com.fengbee.lib_pay_core.wxpayhelper.WXPayTransitActivity" />
+            android:targetActivity="cn.kevinwu.lib_pay_core.wxpayhelper.WXPayTransitActivity" />
 ```
 
 5.权限配置，Android 6.0以上外置存储读写权限请动态申请
