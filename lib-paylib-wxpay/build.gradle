@@ -1,7 +1,5 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
-
-group='com.github.KevinWu1993'
+apply plugin: 'com.novoda.bintray-release'
 
 def libVersionName = "1.0.0"
 def libVersionCode = 100
@@ -28,3 +26,11 @@ dependencies {
     api 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:5.1.4'
 }
 
+publish {
+    userOrg = 'kevinwu1993'//bintray.com用户名
+    groupId = 'cn.kevinwu'//jcenter上的路径
+    artifactId = 'lib-paylib-wxpay'//项目名称
+    publishVersion = libVersionName//版本号
+    desc = '聚合微信、支付宝、Ping++支付，可根据需求扩展支付方式'
+    website = 'https://kevinwu.cn'
+}

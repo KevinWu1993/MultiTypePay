@@ -5,8 +5,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
-import com.kevinwu.lib_pay_core.core.MultiPayContext;
 import com.pingplusplus.android.Pingpp;
+
+import cn.kevinwu.lib_pay_core.core.MultiPayContext;
 
 /**
  * 此Activity作为ping++支付承载Activity

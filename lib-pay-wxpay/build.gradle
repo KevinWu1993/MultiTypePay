@@ -1,7 +1,5 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
-
-group='com.github.KevinWu1993'
+apply plugin: 'com.novoda.bintray-release'
 
 def libVersionName = "1.0.0"
 def libVersionCode = 100
@@ -14,10 +12,7 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode libVersionCode
         versionName libVersionName
-
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
-    }
+  }
 
     buildTypes {
         release {
@@ -29,12 +24,15 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-    implementation rootProject.ext.appcompatV7
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     compileOnly project(':lib-pay-core')
     compileOnly project(':lib-paylib-wxpay')
+}
+
+publish {
+    userOrg = 'kevinwu1993'//bintray.com用户名
+    groupId = 'cn.kevinwu'//jcenter上的路径
+    artifactId = 'lib-pay-wxpay'//项目名称
+    publishVersion = libVersionName//版本号
+    desc = '聚合微信、支付宝、Ping++支付，可根据需求扩展支付方式'
+    website = 'https://kevinwu.cn'
 }

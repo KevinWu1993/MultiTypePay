@@ -1,7 +1,5 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
-
-group='com.github.KevinWu1993'
+apply plugin: 'com.novoda.bintray-release'
 
 def libVersionName = "1.0.0"
 def libVersionCode = 100
@@ -14,9 +12,6 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode libVersionCode
         versionName libVersionName
-
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
     }
 
     buildTypes {
@@ -30,4 +25,13 @@ android {
 
 dependencies {
     api files('libs/alipaySdk-20180316.jar')
+}
+
+publish {
+    userOrg = 'kevinwu1993'//bintray.com用户名
+    groupId = 'cn.kevinwu'//jcenter上的路径
+    artifactId = 'lib-paylib-alipay'//项目名称
+    publishVersion = libVersionName//版本号
+    desc = '聚合微信、支付宝、Ping++支付，可根据需求扩展支付方式'
+    website = 'https://kevinwu.cn'
 }
