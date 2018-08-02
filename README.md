@@ -206,7 +206,19 @@ MultiTypePay只包含了微信、支付宝、ping++支付方式，如果需要�
 
 ### 六、混淆规则
 
-待补充
+``` jshelllanguage
+#微信支付
+-keep class  com.tencent.** { *; }
+-keep interface  com.tencent.** { *; }
+#支付宝
+-dontwarn android.net.**
+-keep class android.net.SSLCertificateSocketFactory{*;}
+-dontwarn com.alipay.**
+-keep class com.alipay.** { *;}
+#ping++
+-dontwarn com.pingplusplus.**
+-keep class com.pingplusplus.** {*;}
+```
 
 ### 七、微信支付、支付宝lib模块与官方SDK一览表
 
@@ -221,6 +233,7 @@ MultiTypePay只包含了微信、支付宝、ping++支付方式，如果需要�
 | paylib版本 | 官方版本 |
 | ----------- | ----------- |
 | 1.0.0 | alipaySdk-20180316 |
+| 1.0.1 | alipaySdk-20180316 |
 
 
 
